@@ -7,12 +7,12 @@ client=Groq(api_key=st.secrets["Agentic_AI"])
 product=st.text_input("Product")
 audience=st.text_input("Audience")
 if st.button("Generate Content"):
-  prompt=f"Write marketing content for {product} targeting {audience}."
-  response=client.chat.completions.create(
+  prompt = f"Write marketing content for {product} targeting {audience}."
+  response = client.chat.completions.create(
     model="llma-3.3-70b-versatile",
     messages=[{"role":"user","content":prompt}]
   )
-  st.session_state.text=response.choices[0].message.content
+  st.session_state.text = response.choices[0].message.content
   text=response.choices[0].message.content
   st.write(text)
 if "text" in st.session_state:
