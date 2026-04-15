@@ -2,7 +2,7 @@ import streamlit as st
 from groq import Groq
 st.set_page_config("Aveon AI Content Generator", layout="wide")
 st.title("Aveon AI - Content Generator")
-st.image("IMG_3800.PNG")
+st.image("AveonAI.png")
 client=Groq(api_key=st.secrets["Agentic_AI"])
 product=st.text_input("Product")
 audience=st.text_input("Audience")
