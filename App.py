@@ -18,9 +18,9 @@ if st.button("Generate Content"):
 if "text" in st.session_state:
     content = st.text_area("Generated Content", st.session_state.text, height=300)
     st.download_button(
-            label="⬇️ Download as TXT",
+            label="⬇️ Download as Word",
             data=content,
-            file_name="marketing_copy.txt",
+            file_name="marketing_copy.docx",
             mime="text/plain"
         )
 else:
